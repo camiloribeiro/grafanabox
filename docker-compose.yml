@@ -1,0 +1,38 @@
+version: '2'
+services:
+  grafana:
+    image: grafana/grafana:3.0.4
+    ports:
+      - "3000:3000"
+    tty: true
+    depends_on:
+      - graphite
+    volumes:
+      - ./docker/dashboards/:/var/lib/grafana/dashboards
+      - ./docker/plugins/:/var/lib/grafana/plugins
+      - ./docker/grafana.ini/:/etc/grafana/grafana.ini
+  
+  graphite:
+    image: sitespeedio/graphite:0.9.14
+    ports:
+      - "2003:2003"
+    tty: true
+    volumes:
+      - ./docker/:/tmp
+
+  temp:
+    image: tutum/curl
+    depends_on:
+      - grafana
+    environment:
+      - DS_NAME=graphite
+      - DS_TYPE=graphite
+      - DS_ACCESS=proxy
+      - DS_URL=http://graphite
+      - DS_AUTH=true
+      - DS_IS_DEFAULT=true
+      - AUTH_PASS=guest
+      - DS_AUTH_USER=guest
+    volumes:
+      - ./docker/setup.sh:/tmp/setup.sh
+    entrypoint: /tmp/setup.sh
