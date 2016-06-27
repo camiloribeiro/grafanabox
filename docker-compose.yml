@@ -20,6 +20,15 @@ services:
     volumes:
       - ./docker/:/tmp
 
+  influxdb:
+    image: influxdb:0.13.0
+    ports:
+      - "8083:8083"
+      - "8086:8086"
+    volumes:
+      - ./docker/influxdb.conf:/etc/influxdb/influxdb.conf
+    tty: true
+
   temp:
     image: tutum/curl
     depends_on:
