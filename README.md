@@ -1,4 +1,4 @@
-# Graphite Grafana 3 Integration
+# Graphite Grafana 3.1 Integration
 
 This is an example of graphite and grafana integration with automation for datasource, plugons and dashboards.
 
