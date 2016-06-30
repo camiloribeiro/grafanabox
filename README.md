@@ -1,6 +1,16 @@
 # Graphite Grafana 3.1 Integration
+      
+      1     ++------------****-----------+--***-------+------****--++
+      0.6   *+           **+  *          +**   *            *******++
+      0.2   +*          *      *         **     **         *     **++
+      0 +   +*        **        *       **       *       **       *++
+      - 0.4 ++**     *          **     **         *      *         *+
+      -0.8  ++ **   *     +       *   ** +         *   **          +*
+      -1    ++--****------+--------***---+----------****-----------++
+      -10           -5             0            5             10
 
 This is an example of graphite and grafana integration with automation for datasource, plugons and dashboards.
+This also shows how to automatically setup datasources for graphite, influxdb and prometheus 
 
 For it you just need to run the folling commands:
 
