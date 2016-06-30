@@ -33,8 +33,6 @@ services:
     image: prom/prometheus:0.20.0
     ports:
       - "9090:9090"
-    #volumes:
-    #  - ./docker/influxdb.conf:/etc/influxdb/influxdb.conf
     tty: true
 
   temp:
