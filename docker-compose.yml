@@ -29,6 +29,14 @@ services:
       - ./docker/influxdb.conf:/etc/influxdb/influxdb.conf
     tty: true
 
+  prometheus:
+    image: prom/prometheus:0.20.0
+    ports:
+      - "9090:9090"
+    #volumes:
+    #  - ./docker/influxdb.conf:/etc/influxdb/influxdb.conf
+    tty: true
+
   temp:
     image: tutum/curl
     depends_on:
