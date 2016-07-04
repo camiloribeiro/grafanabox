@@ -1,7 +1,6 @@
 {
   "id": 1,
     "title": "Example Dashbard",
-    "originalTitle": "Example Dashbard",
     "tags": [],
     "style": "dark",
     "timezone": "browser",
@@ -69,7 +68,25 @@
             "value": "null"
           }
         ],
-          "valueName": "current"
+          "valueName": "current",
+          "mappingTypes": [
+          {
+            "name": "value to text",
+            "value": 1
+          },
+          {
+            "name": "range to text",
+            "value": 2
+          }
+        ],
+          "rangeMaps": [
+          {
+            "from": "null",
+            "to": "null",
+            "text": "N/A"
+          }
+        ],
+          "mappingType": 1
       },
       {
         "aliasColors": {},
@@ -119,7 +136,8 @@
           "tooltip": {
             "msResolution": false,
             "shared": true,
-            "value_type": "cumulative"
+            "value_type": "cumulative",
+            "sort": 0
           },
           "type": "graph",
           "xaxis": {
@@ -194,7 +212,8 @@
           "tooltip": {
             "msResolution": false,
             "shared": true,
-            "value_type": "cumulative"
+            "value_type": "cumulative",
+            "sort": 0
           },
           "type": "graph",
           "xaxis": {
@@ -259,9 +278,18 @@
       "list": []
     },
     "annotations": {
-      "list": []
+      "list": [
+      {
+        "name": "Events",
+        "datasource": "graphite",
+        "iconColor": "rgba(255, 96, 96, 1)",
+        "enable": true,
+        "tags": "test"
+      }
+      ]
     },
     "schemaVersion": 12,
     "version": 2,
-    "links": []
+    "links": [],
+    "gnetId": null
 }
