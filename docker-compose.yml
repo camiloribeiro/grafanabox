@@ -7,6 +7,9 @@ services:
     tty: true
     depends_on:
       - graphite
+      - elasticsearch
+      - prometheus
+      - influxdb
     volumes:
       - ./docker/dashboards/:/var/lib/grafana/dashboards
       - ./docker/plugins/:/var/lib/grafana/plugins
@@ -19,6 +22,10 @@ services:
     tty: true
     volumes:
       - ./docker/:/tmp
+
+  elasticsearch:
+    image: elasticsearch:2.3.3
+    tty: true
 
   influxdb:
     image: influxdb:0.13.0

@@ -9,8 +9,8 @@
       -1    ++--****------+--------***---+----------****-----------++
       -10           -5             0            5             10
 
-This is an example of graphite and grafana integration with automation for datasource, plugons and dashboards.
-This also shows how to automatically setup datasources for graphite, influxdb and prometheus 
+This is an example of graphite and grafana integration with automation for datasource, plugins, events and dashboards.
+This also shows how to automatically setup datasources for graphite, influxdb, prometheus and elasticsearch
 
 For it you just need to run the folling commands:
 
