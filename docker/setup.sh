@@ -10,3 +10,4 @@ curl -v -X POST http://guest:guest@graphite/events/ -d '{"what": "This is an exa
 sleep 10
 curl -H "Content-Type: application/json" -X POST -d '{"name":"elasticsearch","type":"elasticsearch","url":"http://elasticsearch:9200","access":"proxy", "database":"elasticsearch", "basicAuth":false, "isDefault":false}' http://admin:admin@grafana:3000/api/datasources
 curl -XPUT 'http://elasticsearch:9200/elasticsearch/example/1' -d '{ "message" : "Example elasticsearch" }'
+curl -H "Content-Type: application/json" -X POST -d '{"name":"opentsdb","type":"opentsdb","url":"http://opentsdb:4242","access":"proxy","basicAuth":false, "isDefault":false, "jsonData": {"tsdbVersion": 2, "tsdbResolution": 1} }' http://admin:admin@grafana:3000/api/datasources

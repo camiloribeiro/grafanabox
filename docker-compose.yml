@@ -10,6 +10,7 @@ services:
       - elasticsearch
       - prometheus
       - influxdb
+      - opentsdb
     volumes:
       - ./docker/dashboards/:/var/lib/grafana/dashboards
       - ./docker/plugins/:/var/lib/grafana/plugins
@@ -40,6 +41,12 @@ services:
     image: prom/prometheus:0.20.0
     ports:
       - "9090:9090"
+    tty: true
+
+  opentsdb:
+    image: petergrace/opentsdb-docker:2.2
+    ports:
+      - "4242:4242"
     tty: true
 
   temp:
