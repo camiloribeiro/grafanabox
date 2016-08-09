@@ -10,7 +10,7 @@
       -10           -5             0            5             10
 
 This is an example of graphite and grafana integration with automation for datasource, plugins, events and dashboards.
-This also shows how to automatically setup datasources for graphite, influxdb, prometheus and elasticsearch
+This also shows how to automatically setup datasources for graphite, influxdb, prometheus, opentsdb and elasticsearch
 
 For it you just need to run the folling commands:
 
@@ -18,7 +18,7 @@ For it you just need to run the folling commands:
       - cd grafanabox
       - docker-compose up
 
-It is all set! go to your dockerhost port 3000 and have fun!
+It is all set! go to your dockerhost port 3000 and have fun! Default user and password admin:admin
 
 If you want to push metrics to graphite you can search on how to do that. The port 2003 is exposed in your local too.
 
